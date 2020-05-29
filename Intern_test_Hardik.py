@@ -34,7 +34,7 @@ GERBER_FOLDER = os.path.abspath(os.path.join(os.path.dirname(__file__), 'not-wor
 # Create a new drawing context
 ctx = GerberCairoContext()
 
-pcb=PCB.from_directory(GERBER_FOLDER, verbose=True)
+pcb=PCB.from_directory(GERBER_FOLDER)
 # Draw the copper layer. render_layer() uses the default color scheme for the
 # layer, based on the layer type. Copper layers are rendered as
 red_theme = theme.Theme(topmask=RenderSettings(COLORS['red soldermask'], alpha=0.8, invert=True), 
